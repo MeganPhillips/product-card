@@ -136,7 +136,7 @@ button:hover, button:focus{
 }
 
 
-@media (min-width: 550px) {
+@media (min-width: 700px) {
     .card {
         flex-direction: row;
         width: 100%;
