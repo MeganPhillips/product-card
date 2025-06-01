@@ -13,7 +13,7 @@
   
 </head>
 <body>
-  <main>
+  <main aria-label="Product preview card">
 
     <article class="card">
       
@@ -29,25 +29,25 @@
           <h1>Gabrielle Essence Eau De Parfum</h1>
         </header>
 
-        <section class="des">
+        <p class="des">
           A floral, solar and voluptuous interpretation composed by Olivier Polge, 
           Perfumer-Creator for the House of CHANEL.
-        </section>
+        </p>
 
-        <section class="cart">
+        <div class="cart">
           <div class="prices">
-            <span class="currPrice"><h1>$149.99</h1></span>
+            <span class="currPrice">$149.99</span>
             <del class="origPrice">$169.99</del>
           </div>
-        <button tabindex="0"> 
+        <button tabindex="0" aria-label="cart button"> 
           <img src="./images/icon-cart.svg" alt="shopping cart">
           Add to Cart 
         </button>
-      </section>
+      </div>
       </div>
     </article>
   </main>
-  <div class="attribution">
+  <div class="attribution" aria-label="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Megan P</a>.
   </div>
