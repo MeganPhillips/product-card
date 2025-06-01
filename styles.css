@@ -1,37 +1,132 @@
-/* :root{
-    --primary-color: hsl(30, 38%, 92%);
-     
-} */
+:root {
+  --primary-color: hsl(158, 36%, 37%);
+  --secondary-color: hsl(30, 38%, 92%);
+  --font-family-base: 'Montserrat', sans-serif;
+  --font-family-sec: 'Fraunces', serif;
+  --font-size-base: 14px;
+  --border-radius: 15px;
+}
+
+h1{
+    font-family: var(--font-family-sec);
+    margin: .5rem 0;
+    font-size: 2rem;
+}
+
+header h1{
+    color: black;
+}
 
 body{
-    background-color: hsl(30, 38%, 92%);
+    background: var(--secondary-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 2rem;
+    padding: 0;
     box-sizing: border-box;
     margin: 0;
 }
 
 .card{
     background: white;
-    border-radius: 0 0 15px 15px;
-    width: 100%;
+    border-radius: var(--border-radius);
+    width: 90vw;
+    height: 90vh;
     max-width: 700px;
-    padding: 1rem;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     box-sizing: border-box;
+    font-family: var(--font-family-base);
+    color: hsl(228, 12%, 48%);
+    font-size: var(--font-size-base);
+
 }
 
-aside img {
+
+picture{
+    margin: 0;
+    width: 100%;
+}
+
+picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+
+
+
+header{
+    padding: 0 1.2rem;
+}
+header p, .des{
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+header p{
+    letter-spacing: .2rem;
+    margin: 1.5rem 0 0 ;
+}
+
+.des{
+    word-spacing: .1rem;
+    line-height: 1.2rem;
+    padding: .5rem 1.2rem;
+
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem; 
   width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 15px 15px 0 0;
+  padding: 0 1.2rem 1.5rem;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.currPrice {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-family: var(--font-family-sec);
+  font-weight: 700;
+}
+
+.original-price {
+  font-size: 1rem;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: .8rem;
+  cursor: pointer;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+button:hover {
+  background-color: hsl(158, 36%, 25%);
 }
 
 
@@ -40,4 +135,31 @@ aside img {
 }
 .attribution a {
     color: hsl(228, 45%, 44%); 
+}
+
+
+@media (min-width: 550px) {
+    .card {
+        flex-direction: row;
+        width: 100%;
+        height: auto; 
+    }
+
+    picture {
+        width: 50%; /* half of the card */
+        height: 100%;
+    }
+
+    picture img {
+        border-radius: 15px 0 0 15px; /* image only has left rounded corners now */
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
